@@ -1,0 +1,44 @@
+# Default configuration for the Reddit discovery tool
+reddit:
+  client_id: ""
+  client_secret: ""
+  username: ""
+  password: ""
+  user_agent: "RedditDiscoveryBot/0.1 by <username>"
+telegram:
+  bot_token: ""
+  admin_ids: ["123456789"]
+  channel_id: ""
+  send_to_channel: false
+filters:
+  nsfw_mode: "nsfw_only"  # nsfw_only | exclude_nsfw | all
+  karma:
+    min: 0
+    max: 100000
+  account_age_days:
+    min: 0
+    max: 4000
+  subscribers:
+    min: 0
+    max: 5000000
+  active_users:
+    min: 0
+    max: 500000
+search:
+  default_posts_per_subreddit: 25
+  default_comments_per_user: 10
+  default_submissions_per_user: 5
+  graph_depth: 2
+  per_depth_limit: 15
+  top_n: 20
+weights:
+  post: 1.0
+  comment: 0.5
+  moderator: 3.0
+  botbouncer_bonus: 2.0
+rate_limit:
+  sleep_seconds: 2
+  cache_ttl_seconds: 900
+notifications:
+  include_results: true
+  include_files: false
